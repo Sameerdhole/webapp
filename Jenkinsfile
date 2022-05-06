@@ -9,7 +9,6 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/Sameerdhole/webapp.git'
       }
     }
     stage('Building Docker image') {
