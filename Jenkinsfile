@@ -7,10 +7,6 @@ pipeline {
   }
   agent any
   stages {
-    stage('Cloning Git') {
-      steps {
-      }
-    }
     stage('Building Docker image') {
       steps{
         script {
