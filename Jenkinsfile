@@ -9,7 +9,7 @@ pipeline {
   stages {
         stage('Cloning Git') {
       steps {
-        withCredentials([gitUsernamePassword(credentialsId: '3b599030-e264-419e-ac3d-f92f905fe4de', gitToolName: 'git')]) {
+        withCredentials([gitUsernamePassword(credentialsId: '3b599030-e264-419e-ac3d-f92f905fe4de')]) {
   git 'git@github.com:Sameerdhole/webapp.git'
 }
       }
