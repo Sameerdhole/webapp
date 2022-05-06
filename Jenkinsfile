@@ -7,11 +7,12 @@ pipeline {
   }
   agent any
   stages {
-        stage('Cloning Git') {
+    stage('Cloning Git') {
       steps {
-        withCredentials([gitUsernamePassword(credentialsId: '3b599030-e264-419e-ac3d-f92f905fe4de')]) {
-  git 'git@github.com:Sameerdhole/webapp.git'
-}
+        git branch: 'main',
+                credentialsId: '3b599030-e264-419e-ac3d-f92f905fe4de',
+                url: 'git@github.com:Sameerdhole/webapp.git'
+        }
       }
     }
     stage('Building Docker image') {
