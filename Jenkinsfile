@@ -10,9 +10,8 @@ pipeline {
         stage('Cloning Git') {
       steps {
         withCredentials([gitUsernamePassword(credentialsId: '3b599030-e264-419e-ac3d-f92f905fe4de', gitToolName: 'git')]) {
-  sh 'git fetch --all'
+  git 'git@github.com:Sameerdhole/webapp.git'
 }
-           git 'git@github.com:Sameerdhole/webapp.git'
       }
     }
     stage('Building Docker image') {
