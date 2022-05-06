@@ -13,7 +13,6 @@ pipeline {
                 credentialsId: '3b599030-e264-419e-ac3d-f92f905fe4de',
                 url: 'git@github.com:Sameerdhole/webapp.git'
         }
-      }
     }
     stage('Building Docker image') {
       steps{
